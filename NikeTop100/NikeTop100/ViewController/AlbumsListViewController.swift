@@ -81,7 +81,10 @@ class AlbumsListViewController: UITableViewController , AlbumListSummaryUI {
             }
         }
     }
-    
+}
+
+//Tableview datasource
+extension AlbumsListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         albums.count
     }
@@ -98,11 +101,13 @@ class AlbumsListViewController: UITableViewController , AlbumListSummaryUI {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let album = albums[indexPath.row]
-        selectionHandler(album)
-    }
 }
 
+//Tableview delegate
+extension AlbumsListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let album = albums[indexPath.row]
+           selectionHandler(album)
+       }
+}
 
