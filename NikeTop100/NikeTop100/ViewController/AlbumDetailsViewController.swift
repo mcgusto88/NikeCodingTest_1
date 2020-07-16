@@ -49,7 +49,7 @@ class AlbumDetailsViewController: UIViewController {
             albumDetailView.imageView.loadImageUsingCache(withUrl: album.imageUrl)
             albumDetailView.albumName.text = album.name
             albumDetailView.artistName.text = album.artistName
-            albumDetailView.genre.text = album.genres.first?.name
+            albumDetailView.genre.text = album.genresDisplay
             albumDetailView.releaseDate.text = album.releaseDate
             albumDetailView.copyright.text = album.copyright
             albumDetailView.iTunesButton.setTitle("View in iTunes", for: .normal)

@@ -76,6 +76,7 @@ class AlbumDetailView : UIView,AlbumDetailUI {
         label.translatesAutoresizingMaskIntoConstraints = false;
         label.font = UIFont.init(name: "AvenirNext-DemiBold", size: 12.0)
         label.textColor = .gray
+        label.numberOfLines = 0
         return label;
     }()
     

@@ -36,7 +36,10 @@ struct Album : Codable {
         case copyright
         case releaseDate
     }
-
+    
+    var genresDisplay: String {
+        return genres.map{$0.name}.joined(separator: ", ");
+    }
 }
 
 
