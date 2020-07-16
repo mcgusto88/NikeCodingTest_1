@@ -23,7 +23,7 @@ class AlbumsListViewController: UITableViewController , AlbumListSummaryUI {
     internal let dataLoader : AlbumsDataLoader
     internal var selectionHandler: AlbumSelectionHandler
     
-    let reuseIdentifier = "albumCell"
+    private let reuseIdentifier = "albumCell"
     private let activityIndicator = UIActivityIndicatorView(style: .medium)
     
     
@@ -43,7 +43,7 @@ class AlbumsListViewController: UITableViewController , AlbumListSummaryUI {
         getAlbums(count:numberOfAlbumsToFetch)
     }
     
-    func setupUI() {
+    private func setupUI() {
         self.tableView.accessibilityLabel = "Albums List"
         self.tableView.estimatedRowHeight = 100
         self.tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)

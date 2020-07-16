@@ -34,7 +34,7 @@ class AlbumDetailsViewController: UIViewController {
         }
     }
         
-    func setupUI(albumDetailView:AlbumDetailUI) {
+    private func setupUI(albumDetailView:AlbumDetailUI) {
         view.backgroundColor = .white
         view.addSubview(albumDetailView)
         
